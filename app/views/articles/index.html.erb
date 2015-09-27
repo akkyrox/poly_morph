@@ -1,7 +1,10 @@
 <h1>Articles</h1>
 <% @articles.each do |article|%>
     <%= article.title%>
-    <br>
     <%= article.description%>
-    <br><br>
+    <%= article.author%>
+    <%= link_to "Coomennt", :controller => "comments", :action => "index", :article_id=> article.id%>
+    <br>
+    <br>
+
 <%end%>

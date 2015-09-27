@@ -1,0 +1,12 @@
+<h1> Comments as Usual </h1>
+<%@comments.each do |comment|%>
+    <%= comment.content%>
+<%end%>
+
+<h1> New Comment </h1>
+<%= form_for (Comment.new) do |f|%>
+    <%debugger%>
+    <%= hidden_field :check_parent, @commentable%>
+    <p>Comment Content<%= f.text_area :content%></p>
+    <%= f.submit "Save Comment"%>
+<%end%>

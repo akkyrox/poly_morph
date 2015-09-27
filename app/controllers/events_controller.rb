@@ -9,7 +9,14 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.create(params[:event])
+    @event = Event.create(event_params)
+    redirect_to @event
+  end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:title, :description, :venue)
   end
 
 end
