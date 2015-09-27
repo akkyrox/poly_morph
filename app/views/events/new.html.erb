@@ -1,0 +1,7 @@
+<h1>Create</h1>
+<%= form_for  @event do |f|%>
+    <p> Event name: <%f.text_field :title%></p>
+    <p> Event description: <%f.text_area :description%></p>
+    <p> Event venue: <%f.text_field :venue%></p>
+    <%f.submit "Save event"%>
+<%end%>

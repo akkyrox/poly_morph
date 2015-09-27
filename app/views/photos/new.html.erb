@@ -1,0 +1,6 @@
+<h1>Create</h1>
+<%= form_for  @photo do |f|%>
+    <p> Photo name: <%f.text_field :title%></p>
+    <p> Photo description: <%f.text_area :description%></p>
+    <%f.submit "Save Photo"%>
+<%end%>
